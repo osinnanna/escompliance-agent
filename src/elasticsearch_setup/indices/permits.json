@@ -1,0 +1,101 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "standard_analyzer": {
+          "type": "standard",
+          "stopwords": "_english_"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "business_id": {
+        "type": "keyword"
+      },
+      "business_name": {
+        "type": "text",
+        "analyzer": "standard_analyzer"
+      },
+      "permit_type": {
+        "type": "keyword"
+      },
+      "permit_number": {
+        "type": "keyword"
+      },
+      "issuing_jurisdiction": {
+        "type": "keyword"
+      },
+      "status": {
+        "type": "keyword"
+      },
+      "issue_date": {
+        "type": "date"
+      },
+      "expiration_date": {
+        "type": "date"
+      },
+      "renewal_date": {
+        "type": "date"
+      },
+      "days_until_expiration": {
+        "type": "integer"
+      },
+      "location": {
+        "type": "geo_point"
+      },
+      "address": {
+        "type": "text",
+        "analyzer": "standard_analyzer"
+      },
+      "city": {
+        "type": "keyword"
+      },
+      "county": {
+        "type": "keyword"
+      },
+      "state": {
+        "type": "keyword"
+      },
+      "zip_code": {
+        "type": "keyword"
+      },
+      "is_food_truck": {
+        "type": "boolean"
+      },
+      "vehicle_number": {
+        "type": "keyword"
+      },
+      "conditions": {
+        "type": "text",
+        "analyzer": "standard_analyzer"
+      },
+      "last_inspection_date": {
+        "type": "date"
+      },
+      "next_inspection_due": {
+        "type": "date"
+      },
+      "inspector_notes": {
+        "type": "text",
+        "analyzer": "standard_analyzer"
+      },
+      "contact_email": {
+        "type": "keyword"
+      },
+      "contact_phone": {
+        "type": "keyword"
+      },
+      "last_updated": {
+        "type": "date"
+      },
+      "created_at": {
+        "type": "date"
+      }
+    }
+  }
+}

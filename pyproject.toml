@@ -1,0 +1,65 @@
+[project]
+name = "escompliance-agent"
+version = "0.1.0"
+description = "AI Agent for Restaurant & Food Truck Compliance using Elasticsearch"
+authors = [
+    {name = "osinnanna", email = "your-email@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+license = {text = "MIT"}
+
+dependencies = [
+    # Elasticsearch
+    "elasticsearch>=8.12.0",
+    "elastic-transport>=8.12.0",
+    
+    # Agent Framework & LLM
+    "openai>=1.12.0",
+    "langchain>=0.1.6",
+    "langchain-community>=0.0.20",
+    "langchain-openai>=0.0.5",
+    
+    # Data handling
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.6.0",
+    "pydantic-settings>=2.1.0",
+    
+    # Date/Time handling
+    "python-dateutil>=2.8.2",
+    "pytz>=2024.1",
+    
+    # API & Web
+    "requests>=2.31.0",
+    "httpx>=0.26.0",
+    
+    # Utilities
+    "rich>=13.7.0",
+    "loguru>=0.7.2",
+    
+    # Optional: Visualization (uncomment if you want custom UI)
+    # "streamlit>=1.31.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.4",
+    "pytest-asyncio>=0.23.3",
+    "ruff>=0.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]

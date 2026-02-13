@@ -1,0 +1,126 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "standard_analyzer": {
+          "type": "standard",
+          "stopwords": "_english_"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "permit_id": {
+        "type": "keyword"
+      },
+      "business_id": {
+        "type": "keyword"
+      },
+      "business_name": {
+        "type": "text",
+        "analyzer": "standard_analyzer"
+      },
+      "inspection_date": {
+        "type": "date"
+      },
+      "inspection_type": {
+        "type": "keyword"
+      },
+      "inspector_name": {
+        "type": "keyword"
+      },
+      "inspector_id": {
+        "type": "keyword"
+      },
+      "jurisdiction": {
+        "type": "keyword"
+      },
+      "location": {
+        "type": "geo_point"
+      },
+      "address": {
+        "type": "text",
+        "analyzer": "standard_analyzer"
+      },
+      "city": {
+        "type": "keyword"
+      },
+      "county": {
+        "type": "keyword"
+      },
+      "state": {
+        "type": "keyword"
+      },
+      "result": {
+        "type": "keyword"
+      },
+      "score": {
+        "type": "integer"
+      },
+      "violations_found": {
+        "type": "integer"
+      },
+      "critical_violations": {
+        "type": "integer"
+      },
+      "non_critical_violations": {
+        "type": "integer"
+      },
+      "violations": {
+        "type": "nested",
+        "properties": {
+          "code": {
+            "type": "keyword"
+          },
+          "description": {
+            "type": "text",
+            "analyzer": "standard_analyzer"
+          },
+          "severity": {
+            "type": "keyword"
+          },
+          "corrected_date": {
+            "type": "date"
+          },
+          "corrected": {
+            "type": "boolean"
+          }
+        }
+      },
+      "notes": {
+        "type": "text",
+        "analyzer": "standard_analyzer"
+      },
+      "action_items": {
+        "type": "text",
+        "analyzer": "standard_analyzer"
+      },
+      "follow_up_inspection_required": {
+        "type": "boolean"
+      },
+      "follow_up_date": {
+        "type": "date"
+      },
+      "business_closure": {
+        "type": "boolean"
+      },
+      "closure_reason": {
+        "type": "text",
+        "analyzer": "standard_analyzer"
+      },
+      "reopening_date": {
+        "type": "date"
+      },
+      "last_updated": {
+        "type": "date"
+      },
+      "created_at": {
+        "type": "date"
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "standard_analyzer": {
+          "type": "standard",
+          "stopwords": "_english_"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "business_id": {
+        "type": "keyword"
+      },
+      "permit_id": {
+        "type": "keyword"
+      },
+      "event_type": {
+        "type": "keyword"
+      },
+      "event_date": {
+        "type": "date"
+      },
+      "severity": {
+        "type": "keyword"
+      },
+      "status": {
+        "type": "keyword"
+      },
+      "description": {
+        "type": "text",
+        "analyzer": "standard_analyzer"
+      },
+      "jurisdiction": {
+        "type": "keyword"
+      },
+      "city": {
+        "type": "keyword"
+      },
+      "county": {
+        "type": "keyword"
+      },
+      "state": {
+        "type": "keyword"
+      },
+      "days_until_deadline": {
+        "type": "integer"
+      },
+      "deadline_date": {
+        "type": "date"
+      },
+      "action_required": {
+        "type": "keyword"
+      },
+      "assigned_to": {
+        "type": "keyword"
+      },
+      "notes": {
+        "type": "text",
+        "analyzer": "standard_analyzer"
+      },
+      "resolution_date": {
+        "type": "date"
+      },
+      "resolution_notes": {
+        "type": "text",
+        "analyzer": "standard_analyzer"
+      },
+      "escalation_level": {
+        "type": "integer"
+      },
+      "related_violations": {
+        "type": "keyword"
+      },
+      "financial_impact": {
+        "type": "long"
+      },
+      "tags": {
+        "type": "keyword"
+      },
+      "created_at": {
+        "type": "date"
+      },
+      "updated_at": {
+        "type": "date"
+      }
+    }
+  }
+}

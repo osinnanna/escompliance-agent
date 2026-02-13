@@ -1,0 +1,80 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "standard_analyzer": {
+          "type": "standard",
+          "stopwords": "_english_"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "jurisdiction": {
+        "type": "keyword"
+      },
+      "jurisdiction_type": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "state": {
+        "type": "keyword"
+      },
+      "county": {
+        "type": "keyword"
+      },
+      "city": {
+        "type": "keyword"
+      },
+      "regulation_code": {
+        "type": "keyword"
+      },
+      "category": {
+        "type": "keyword"
+      },
+      "title": {
+        "type": "text",
+        "analyzer": "standard_analyzer"
+      },
+      "description": {
+        "type": "text",
+        "analyzer": "standard_analyzer"
+      },
+      "requirements": {
+        "type": "text",
+        "analyzer": "standard_analyzer"
+      },
+      "penalty_type": {
+        "type": "keyword"
+      },
+      "penalty_amount_min": {
+        "type": "long"
+      },
+      "penalty_amount_max": {
+        "type": "long"
+      },
+      "inspection_frequency_months": {
+        "type": "integer"
+      },
+      "applicable_to": {
+        "type": "keyword"
+      },
+      "source_url": {
+        "type": "keyword"
+      },
+      "last_updated": {
+        "type": "date"
+      },
+      "effective_date": {
+        "type": "date"
+      },
+      "tags": {
+        "type": "keyword"
+      }
+    }
+  }
+}
